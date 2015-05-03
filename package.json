@@ -1,0 +1,16 @@
+{
+  "name": "gulp-react-jade-amd",
+  "version": "1.0.0",
+  "description": "For [jadejs/react-jade](https://github.com/jadejs/react-jade \"jadejs/react-jade\")",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vladimir Polyakov",
+  "license": "MIT",
+  "dependencies": {
+    "gulp-util": "^3.0.4",
+    "react-jade": "^2.4.0",
+    "through2": "^0.6.3"
+  }
+}
