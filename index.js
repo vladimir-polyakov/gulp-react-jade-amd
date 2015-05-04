@@ -17,7 +17,7 @@ function gulpReactJadeAmd(options) {
 		if (file.isBuffer()) {
 			var templateString = reactJade.compileClient(
 				file.contents.toString(),
-				options
+				{globalReact: true}
 			).toString();
 			file.contents = new Buffer(
 				'define([\'react\'], function(React) {return ' + templateString + ';});'
