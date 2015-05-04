@@ -1,7 +1,7 @@
 'use strict';
 
 var through = require('through2');
-var path = require('path');
+var replaceExt = require('replace-ext');
 var reactJade = require('react-jade');
 var gutil = require('gulp-util');
 var PluginError = gutil.PluginError;
@@ -22,8 +22,7 @@ function gulpReactJadeAmd(options) {
 			file.contents = new Buffer(
 				'define([\'react\'], function(React) {return ' + templateString + ';});'
 			);
-			file.path = path.dirname(file.path) + '/' +
-				path.basename(file.path, path.extname(file.path)) + '.js';
+			file.path = replaceExt(file.path, '.js');
 			this.push(file);
 			return callback();
 		}
